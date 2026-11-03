@@ -1,5 +1,5 @@
 import pytest
-from grades import average, grade
+from grades import average, grade, pass_rate
 
 @pytest.mark.parametrize(
     "score, expected",
@@ -22,3 +22,6 @@ def test_average_rounds_to_2_digits():
 def test_average_empty_list():
     with pytest.raises(ValueError, match="อย่างน้อย 1 ค่า"):
         average([])
+
+def test_pass_rate():
+    assert pass_rate([80, 50, 40, 30]) == 50
