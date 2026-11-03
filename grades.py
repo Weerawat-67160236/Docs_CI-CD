@@ -1,3 +1,4 @@
+import os
 def grade(score):
     """แปลงคะแนน 0-100 เป็นเกรด"""
     if not 0 <= score <= 100:
