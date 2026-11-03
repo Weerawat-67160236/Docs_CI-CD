@@ -20,5 +20,5 @@ def average(scores):
 
 def pass_rate(scores):
     """เปอร์เซ็นต์คนที่ได้ 50 คะแนนขึ้นไป"""
-    passed = [s for s in scores if s > 50]
+    passed = [s for s in scores if s >= 50]
     return round(len(passed) / len(scores) * 100, 2)

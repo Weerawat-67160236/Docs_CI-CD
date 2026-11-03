@@ -48,12 +48,6 @@ jobs:
         env:
           SITE_TITLE: ${{ vars.SITE_TITLE }}
         run: python build_site.py
-      - name: Check secret
-        env:
-          API_KEY: ${{ secrets.DEMO_API_KEY }}
-        run: |
-          echo "secret value: $API_KEY"
-          python -c "import os; print('API_KEY length:', len(os.environ['API_KEY']))"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
